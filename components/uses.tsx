@@ -68,7 +68,7 @@ export function Uses() {
   const inView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="uses" className="py-32 border-t border-white/5">
+    <section id="uses" className="py-16 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}

@@ -33,10 +33,10 @@ export function Hero() {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-[#080808]" />
 
 
-      <div className="relative max-w-6xl mx-auto px-6 py-16 w-full">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+      <div className="relative max-w-6xl mx-auto px-6 py-10 md:py-16 w-full">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16">
           {/* Text */}
-          <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl">
+          <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl text-center md:text-left">
             <motion.div variants={item} className="mb-4">
               <span className="text-sm text-[#888888] tracking-widest uppercase">
                 {personalInfo.location} · {personalInfo.university}
@@ -45,7 +45,7 @@ export function Hero() {
 
             <motion.h1
               variants={item}
-              className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.05] mb-6"
+              className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.05] mb-6"
             >
               {personalInfo.name}
             </motion.h1>
@@ -54,14 +54,14 @@ export function Hero() {
               Fullstack Engineer
             </motion.p>
 
-            <motion.p variants={item} className="text-base text-[#888888] max-w-lg leading-relaxed mb-12">
+            <motion.p variants={item} className="text-base text-[#888888] max-w-lg leading-relaxed mb-12 mx-auto md:mx-0">
               Computer Science graduate passionate about building software that
               solves real problems — scalable systems, clean architecture, and
               code that holds up in production. I care about the impact of what
               I build as much as how it&apos;s built.
             </motion.p>
 
-            <motion.div variants={item} className="flex flex-wrap gap-4">
+            <motion.div variants={item} className="flex flex-wrap gap-4 justify-center md:justify-start">
               <button
                 onClick={() => scrollToSection("projects")}
                 className="px-6 py-3 bg-white text-black text-sm font-medium rounded hover:bg-white/90 transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
@@ -86,7 +86,7 @@ export function Hero() {
             className="flex justify-center md:justify-end md:pr-4 shrink-0"
           >
             <div className="relative">
-              <div className="w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 ring-1 ring-white/5 ring-offset-4 ring-offset-[#080808]">
+              <div className="w-44 h-44 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 ring-1 ring-white/5 ring-offset-4 ring-offset-[#080808]">
                 <Image
                   src={personalInfo.avatarUrl}
                   alt={personalInfo.name}

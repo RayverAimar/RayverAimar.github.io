@@ -112,14 +112,14 @@ function SectionHeader({ label, title }: { label: string; title: string }) {
 
 export function Experience() {
   return (
-    <section id="experience" className="py-32 border-t border-white/5">
-      <div className="max-w-6xl mx-auto px-6 space-y-28">
+    <section id="experience" className="py-16 md:py-32 border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-6 space-y-16 md:space-y-28">
 
         {/* Stats */}
         <FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
             {stats.map((s) => (
-              <div key={s.label} className="bg-[#0d0d0d] px-8 py-8 group hover:bg-[#111111] transition-colors">
+              <div key={s.label} className="bg-[#0d0d0d] px-4 py-6 md:px-8 md:py-8 group hover:bg-[#111111] transition-colors">
                 <span className="text-4xl md:text-5xl font-bold text-white tracking-tight block mb-1">
                   {s.value}
                 </span>
@@ -186,7 +186,7 @@ export function Experience() {
         </div>
 
         {/* Education + GitHub */}
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
 
           {/* Education */}
           <div>
@@ -249,7 +249,7 @@ export function Experience() {
                         transition={{ duration: 0.4, delay: i * STAGGER.language, ease: EASING }}
                         className="flex items-center gap-3"
                       >
-                        <span className="text-xs text-[#666666] w-32 shrink-0">{lang.name}</span>
+                        <span className="text-xs text-[#666666] w-20 sm:w-32 shrink-0">{lang.name}</span>
                         <div className="flex-1 h-px bg-white/5 relative">
                           <motion.div
                             initial={{ scaleX: 0 }}

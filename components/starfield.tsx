@@ -173,7 +173,8 @@ export function StarField() {
       const mx = mouse.current.x, my = mouse.current.y, mActive = mouse.current.active
 
       // constellations fade out as user scrolls past the hero section (~100vh)
-      const constAlpha = Math.max(0, 1 - scroll.current / (H * 0.65))
+      // disabled on narrow screens where portrait layout breaks the positioning
+      const constAlpha = W < 768 ? 0 : Math.max(0, 1 - scroll.current / (H * 0.65))
 
       // ── faint ambient constellation lines ─────────────────────────────────
       ctx.lineWidth = 0.5

@@ -124,7 +124,7 @@ function MacOsFrame({ image, title, isPrivate, imagePosition }: {
 function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
   return (
     <Dialog open onOpenChange={(open) => { if (!open) onClose() }}>
-      <DialogContent className="bg-[#0d0d0d] border border-white/10 text-white max-w-4xl w-full p-0 overflow-hidden">
+      <DialogContent className="bg-[#0d0d0d] border border-white/10 text-white max-w-4xl w-full p-0 overflow-y-auto max-h-[90dvh]">
         <DialogTitle className="sr-only">{project.title}</DialogTitle>
 
         <div className="relative bg-[#0d0d0d] overflow-hidden rounded-t-lg" style={{ aspectRatio: "16/9" }}>
@@ -270,7 +270,7 @@ export function Projects() {
   const [selected, setSelected] = useState<Project | null>(null)
 
   return (
-    <section id="projects" className="py-32 border-t border-white/5">
+    <section id="projects" className="py-16 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}

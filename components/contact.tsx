@@ -38,7 +38,7 @@ export function Contact() {
   const inView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="contact" className="py-32 border-t border-white/5">
+    <section id="contact" className="py-16 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -58,7 +58,7 @@ export function Contact() {
 
           <a
             href={`mailto:${personalInfo.email}`}
-            className="block text-xl sm:text-2xl text-white font-light hover:text-[#aaaaaa] transition-colors mb-12 border-b border-white/10 pb-4 focus-visible:outline-none focus-visible:text-[#aaaaaa]"
+            className="block text-base sm:text-xl md:text-2xl text-white font-light hover:text-[#aaaaaa] transition-colors mb-12 border-b border-white/10 pb-4 break-all focus-visible:outline-none focus-visible:text-[#aaaaaa]"
           >
             {personalInfo.email}
           </a>
