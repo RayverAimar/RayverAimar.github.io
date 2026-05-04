@@ -36,7 +36,7 @@ export function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 py-10 md:py-16 w-full">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16">
           {/* Text */}
-          <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl text-center md:text-left">
+          <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl text-center md:text-left order-last md:order-first">
             <motion.div variants={item} className="mb-4">
               <span className="text-sm text-[#888888] tracking-widest uppercase">
                 {personalInfo.location} · {personalInfo.university}
@@ -83,21 +83,21 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: DURATION.slow, delay: 0.4, ease: EASING }}
-            className="flex justify-center md:justify-end md:pr-4 shrink-0"
+            className="flex justify-center md:justify-end md:pr-4 shrink-0 order-first md:order-last"
           >
             <div className="relative">
-              <div className="w-44 h-44 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 ring-1 ring-white/5 ring-offset-4 ring-offset-[#080808]">
+              <div className="w-36 h-36 sm:w-52 sm:h-52 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 ring-1 ring-white/5 ring-offset-4 ring-offset-[#080808]">
                 <Image
                   src={personalInfo.avatarUrl}
                   alt={personalInfo.name}
-                  width={256}
-                  height={256}
+                  width={320}
+                  height={320}
                   className="object-cover object-top w-full h-full"
                   priority
                   unoptimized
                 />
               </div>
-              <div className="absolute inset-0 rounded-full bg-white/5 blur-2xl -z-10 scale-110" />
+              <div className="absolute inset-0 rounded-full bg-white/5 blur-3xl -z-10 scale-125 opacity-60" />
             </div>
           </motion.div>
         </div>
